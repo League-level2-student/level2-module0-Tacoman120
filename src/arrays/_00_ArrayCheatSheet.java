@@ -20,11 +20,13 @@ public class _00_ArrayCheatSheet {
 		}
 		
 		//6. make an array of 50 integers
-		int array[] = {50}; 
+		int[] array = new int[50]; 
 		//7. use a for loop to make every value of the integer array a random number
-		Random ran = new Random();
+		
 		for(int i = 0; i< array.length; i++) {
-			array[i] = ran.nextInt(50)+1; 
+			Random ran = new Random();
+			int num = ran.nextInt(50)+1; 
+			array[i] = num;
 		}
 		//8. without printing the entire array, print only the smallest number in the array
 		int smallest = 1000;
@@ -35,9 +37,23 @@ public class _00_ArrayCheatSheet {
 				smallest = value;
 			}
 		}
+		System.out.println("");
 		System.out.println(smallest);
 		//9 print the entire array to see if step 8 was correct
-		
+		System.out.println("");
+		for (int age : array) {
+		     System.out.println(age);
+		}
 		//10. print the largest number in the array.
+		System.out.println();
+		int largest = 0;
+		for(int x = 0; x<array.length; x++) {
+			
+			int value = array[x];
+			if(value>largest) {
+				largest = value;
+			}
+		}
+		System.out.println(largest);
 	}
 }
