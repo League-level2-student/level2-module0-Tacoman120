@@ -20,11 +20,19 @@ public class _01_RobotRace {
 		for(int i = 0; i<rob.length; i++) {
 			int num = ran.nextInt(50);
 			rob[i].move(num);
-			if(rob[i].getY() == 0) {
+			if(rob[i].getY() <= 0) {
 				finished  = true;
 				break;
 			}
 		}
+		}
+		if(finished = true) {
+			for(int y = 0; y<5; y++) {
+			for(int x = 0; x<rob.length; x++) {
+				rob[x].setSpeed(100);
+				rob[x].turn(360);
+			}
+			}
 		}
 	}
 	//2. create an array of 5 robots.
