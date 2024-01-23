@@ -32,7 +32,9 @@ public class SwingReview implements ActionListener, KeyListener {
 
 	public void run() throws Exception {
 		// 1. Initialize your JFrame variable as an object of the JFrame class
-		
+		frame = new JFrame();
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// 2. Set your JFrame object to be visible
 		// JFrames are hidden by default! Make sure you are telling it to set visible, not asking if it is visible!
 
@@ -44,23 +46,23 @@ public class SwingReview implements ActionListener, KeyListener {
 		// running in the background even after we hit the red X.
 
 		// 5. Initialize your JPanel variable as an object of the JPanel class
-
+		panel = new JPanel();
 		// 6. Initialize your JLabel variable as an object of the JLabel class
-
+		label = new JLabel();
 		// 7. Set the text of the JLabel to a lovely greeting.
-
+		label.setText("a lovely greeting");
 		// 8. Add the JPanel object to the JFrame
-
+		frame.add(panel);
 		// 9. Add the JLabel object to the JPanel
-
+		panel.add(label);
 		// 10. Pack your JFrame.
-
+		frame.pack();
 		// 11. Run your program again. Do you see your message?
 
 		// 12. Use the loadImage method to set the icon of the JLabel object.
-
+		label.setIcon(loadImage("https://t4.ftcdn.net/jpg/01/36/70/67/360_F_136706734_KWhNBhLvY5XTlZVocpxFQK1FfKNOYbMj.jpg"));
 		// 13. Re-pack the JFrame object.
-
+		frame.pack();
 		// 14. Run your program again. Do you see the image?
 
 		// 15. Initialize your first JButton variable as an object of the JButton class
